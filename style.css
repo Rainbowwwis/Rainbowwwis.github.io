@@ -12,9 +12,10 @@ body {
 }
 
 header, section, footer {
-    max-width:720px;
+    max-width:1000px;
     margin:0 auto;
     padding:40px 20px;
+    width:100%;
 }
 
 header {
@@ -25,7 +26,7 @@ header {
 button {
     background:#aea794;
     border-radius:12px;
-    font-size:1rem;
+    font-size:1.2rem;
     color:#1a1a1a;
     text-align:center;
     padding:10px 10px;
@@ -70,12 +71,38 @@ section li:hover {
     background:#e9b83d;
 }
 
+.works-navigation {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.works-navigation a {
+    font-size: 1.2rem;
+    display:block;
+    text-decoration:none;
+    background:#fff7cf;
+    color:#333;
+    padding:16px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align:center;
+}
+
+.works-navigation a:hover {
+    background:#ffe39b;
+}
+
+.works-navigation a.active {
+    background:#ffca43
+}
+
 h2 {
     font-size:1.4rem;
     margin-bottom:16px;
 }
 
-img {
+.profile-image {
     width:120px;
     height:120px;
     border-radius:50%;
@@ -83,7 +110,72 @@ img {
     margin-top:20px;
 }
 
-a {
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    z-index:1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox img {
+    max-width: 95vw;
+    max-height: 95vh;
+    width: auto !important; 
+    height: auto !important;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+figure {
+    background:#fff;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0, 0, 0, 0.3);
+    padding:16px;
+    display:flex;
+    flex-direction:column;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+figure p {
+    font-size:0.9rem;
+}
+
+figcaption {
+    margin-top: auto;
+}
+
+.comic-gallery img {
+    width:200px;
+}
+
+.comic-gallery {
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:30px;
+}
+
+.sketch-gallery,
+.finished-gallery,
+.photos-gallery {
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:20px;
+}
+
+.github-btn a {
     padding:8px 16px;
     background:#79715c;
     color:#fff;
@@ -92,7 +184,7 @@ a {
     display:inline-block;
 }
 
-a:hover {
+.github-btn a:hover {
     background:#4c4635
 }
 
@@ -122,6 +214,17 @@ a:hover {
     background:#373224
 }
 
+.dark .works-navigation a {
+    background: #534c3a;
+    color: #eee;
+}
+.dark .works-navigation a.active {
+    background: #433611;
+}
+.dark figure figcaption {
+    color: #1a1a1a;
+}
+
 @media (max-width: 768px) {
     h1 {
     font-size:1.5rem;
@@ -140,5 +243,9 @@ a:hover {
     border-radius:50%;
     object-fit:cover;
     margin-top:20px;
+    }
+
+    .works-navigation {
+    grid-template-columns: repeat(2, 1fr);
     }
 }

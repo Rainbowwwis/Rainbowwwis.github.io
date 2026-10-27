@@ -1,0 +1,20 @@
+[
+  {
+    "title": "comic-01",
+    "date": "2025.09",
+    "desc": "假情书",
+    "src": "images/comic/comic-01.jpg"
+  },
+  {
+    "title": "comic-02",
+    "date": "2026.09",
+    "desc": "我鞋子没了（",
+    "src": "images/comic/comic-02.jpg"
+  },
+  {
+    "title": "comic-03",
+    "date": "2026.10",
+    "desc": "像动漫人物一样哭",
+    "src": "images/comic/comic-03.jpg"
+  }
+]
