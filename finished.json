@@ -28,5 +28,11 @@
     "date": "2026.09",
     "desc": "你在就好",
     "src": "images/finished/finished-05.jpg"
+  },
+  {
+    "title": "finished-06",
+    "date": "2026.10",
+    "desc": "Trick or Treat!",
+    "sec": "images/finished/finished-06.jpg"
   }
 ]
